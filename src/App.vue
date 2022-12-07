@@ -5,6 +5,7 @@ import HeaderAgencyAddress from "./components/HeaderAgencyAddress.vue";
 import FooterAgencyAddress from "./components/FooterAgencyAddress.vue";
 import PropertyAddress from "./components/PropertyAddress.vue";
 import data from "@/data/report.json";
+import SummaryMain from "./components/SummaryMain.vue";
 
 function toSrc(img) {
   return `data:image/png;base64,${img}`;
@@ -31,8 +32,6 @@ function onClick() {
 
     <section
       class="page w-[210mm] h-[296.5mm] print:m-0 bg-white relative mx-auto"
-      v-for="n in 10"
-      :key="n"
     >
       <header class="absolute top-0 left-0 right-0 w-full h-[3cm]">
         <div class="flex justify-between px-[1.5cm] items-center">
@@ -85,9 +84,39 @@ function onClick() {
             </div>
           </div>
         </div>
-
-        <!-- <TheWelcome /> -->
       </div>
+
+      <summary-main />
+
+      <footer class="absolute bottom-0 left-0 right-0 w-full px-[1.5cm]">
+        <div
+          class="bg-black px-[1cm] h-[1.5cm] flex items-center justify-between text-white"
+        >
+          <FooterAgencyAddress :agency="data.Agency"></FooterAgencyAddress>
+          <div>{{ n }}</div>
+        </div>
+      </footer>
+    </section>
+    <section
+      class="page w-[210mm] h-[296.5mm] print:m-0 bg-white relative mx-auto"
+    >
+      <header class="absolute top-0 left-0 right-0 w-full h-[3cm]">
+        <div class="flex justify-between px-[1.5cm] items-center">
+          <HeaderAgencyAddress
+            class="w-3/4"
+            :agency="data.Agency"
+          ></HeaderAgencyAddress>
+          <div class="flex justify-end w-1/4">
+            <img
+              class="h-[30mm] w-[160mm] object-contain"
+              :src="toSrc(data.Images.AgencyLogo)"
+              alt="Agency Logo"
+            />
+          </div>
+        </div>
+      </header>
+
+      <summary-main />
 
       <footer class="absolute bottom-0 left-0 right-0 w-full px-[1.5cm]">
         <div
