@@ -2,72 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-#app,
-main {
-  height: 100%;
-}
-
 @page {
-  margin: 0;
+  size: A4 portrait;
 }
 
 @media print {
-  a:after {
-    content: "( " attr(href) ") ";
-  }
-
-  h1 {
-    page-break-before: always;
-  }
-
   h1,
   h2,
   h3,
   h4,
   h5 {
-    page-break-after: avoid;
+    break-after: avoid;
   }
 
   table,
   figure {
-    page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   section.page {
-    position: relative;
-    page-break-after: always;
-    display: grid;
-    height: 100%;
-    grid-template-rows: 100px 1fr 100px;
-  }
-
-  @media not all and (min-resolution: 0.001dpcm) {
-    @media {
-      .page {
-        margin: -1cm;
-      }
-    }
-  }
-
-  section.page header {
-    width: 100%;
-    background: blue;
-  }
-
-  section.page footer {
-    width: 100%;
-    background: red;
+    break-inside: avoid;
   }
 }
+/* @media screen {
+  * {
+    outline: 2px solid red;
+  }
+} */
