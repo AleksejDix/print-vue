@@ -3,11 +3,10 @@
 @tailwind utilities;
 
 * {
-  -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
-  color-adjust: exact !important;                 /* Firefox 48 – 96 */
-  print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
+  -webkit-print-color-adjust: exact !important; /* Chrome, Safari 6 – 15.3, Edge */
+  color-adjust: exact !important; /* Firefox 48 – 96 */
+  print-color-adjust: exact !important; /* Firefox 97+, Safari 15.4+ */
 }
-
 
 @page {
   size: A4 portrait;
@@ -19,11 +18,11 @@
 }
 
 @page :footer {
-    display: none
+  display: none;
 }
 
 @page :header {
-    display: none
+  display: none;
 }
 
 @media print {
@@ -49,3 +48,7 @@
     outline: 2px solid red;
   }
 } */
+
+[contenteditable] {
+  @apply outline-dotted outline-emerald-400;
+}

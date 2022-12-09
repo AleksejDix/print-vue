@@ -9,9 +9,13 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "vue": "^3.2.45"
+    "html2pdf.js": "^0.9.3",
+    "vue": "^3.2.45",
+    "vue-i18n": "9"
   },
   "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^0.8.0",
+    "@intlify/vite-plugin-vue-i18n": "^6.0.3",
     "@rushstack/eslint-patch": "^1.1.4",
     "@vitejs/plugin-vue": "^3.2.0",
     "@vue/eslint-config-prettier": "^7.0.0",
