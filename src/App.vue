@@ -28,10 +28,16 @@ function onClick() {
 
 <template>
   <main class="bg-gray-400 print:bg-transparent space-y-[2cm] print:space-y-0">
-    <button @click="onClick" class="print:hidden">print</button>
+
+    <div class="grid gap-8 grid-cols-3 max-w-xl mx-auto">
+
+      <button @click="onClick" class="print:hidden bg-white text-black px-3 py-2 whitespace-nowrap">print</button>
+      <a href="/pdf.pdf" class="print:hidden bg-white text-black px-3 py-2  whitespace-nowrap">PDF herunterladen</a>
+      <button class="print:hidden bg-white text-black px-3 py-2  whitespace-nowrap">teilen</button>
+    </div>
 
     <section
-      class="page w-[210mm] h-[296.5mm] print:m-0 bg-white relative mx-auto"
+      class="page w-[210mm] h-[296.99999999mm] print:m-0 bg-white relative mx-auto"
     >
       <header class="absolute top-0 left-0 right-0 w-full h-[3cm]">
         <div class="flex justify-between px-[1.5cm] items-center">
@@ -129,26 +135,3 @@ function onClick() {
     </section>
   </main>
 </template>
-
-<style scoped>
-a:after {
-  content: "( " attr(href) ") ";
-}
-
-h1 {
-  page-break-before: always;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  page-break-after: avoid;
-}
-
-table,
-figure {
-  page-break-inside: avoid;
-}
-</style>

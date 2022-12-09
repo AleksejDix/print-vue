@@ -3,12 +3,7 @@
     class="pt-[4cm] grid overflow-hidden grid-cols-2 auto-rows-content px-[1.5cm] py-[1cm]"
   >
     <div class="box row-span-1 col-span-2 bg-[#113654] p-[0.5cm]">
-      <p class="text-white text-2xl">
-        Einfamilienhaus mit Seeblick und viel Umschwung.
-      </p>
-      <p class="text-white text-2xl">
-        Einfamilienhaus mit Seeblick undviel Umschwung.
-      </p>
+
       <p class="text-white text-2xl">
         Einfamilienhaus mit Seeblick und viel Umschwung.
       </p>
