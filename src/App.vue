@@ -1,6 +1,6 @@
 <template>
   <main class="bg-gray-400 print:bg-transparent space-y-[2cm] print:space-y-0">
-    <!-- <div class="grid gap-8 grid-cols-3 max-w-xl mx-auto">
+    <div class="grid gap-8 grid-cols-3 max-w-xl mx-auto">
       <button
         @click="onClick"
         class="print:hidden bg-white text-black px-3 py-2 whitespace-nowrap"
@@ -13,7 +13,7 @@
       >
         PDF herunterladen
       </button>
-    </div> -->
+    </div>
 
     <div ref="page">
       <section
@@ -23,7 +23,7 @@
       >
         <component :is="header"></component>
 
-        <!-- <header class="absolute top-0 left-0 right-0 w-full h-[3cm]">
+        <header class="absolute top-0 left-0 right-0 w-full h-[3cm]">
           <div class="flex justify-between px-[1.5cm] items-center py-[1cm]">
             <HeaderAgencyAddress
               class="w-3/4"
@@ -37,7 +37,7 @@
               />
             </div>
           </div>
-        </header> -->
+        </header>
 
         <component :is="content"></component>
 

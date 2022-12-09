@@ -3,7 +3,6 @@
     class="pt-[4cm] grid overflow-hidden grid-cols-2 auto-rows-content px-[1.5cm] py-[1cm]"
   >
     <div class="box row-span-1 col-span-2 bg-[#113654] p-[0.5cm]">
-
       <p class="text-white text-2xl">
         Einfamilienhaus mit Seeblick und viel Umschwung.
       </p>
@@ -67,30 +66,30 @@
       <p class="text-2xl mb-[0.5cm]">
         Standort <span class="text-cyan-600">2/5</span>
       </p>
-      <div class="grid overflow-hidden grid-cols-3 grid-rows-2 gap-2">
+      <div class="grid overflow-hidden grid-cols-3 grid-rows-2 gap-x-8 gap-y-4">
         <div class="box">
           <p class="font-semibold mb-1">Stille</p>
-          <rating />
+          <rating rating="2" />
         </div>
         <div class="box">
           <p class="font-semibold mb-1">Schulen</p>
-          <rating />
+          <rating rating="2" />
         </div>
         <div class="box">
           <p class="font-semibold mb-1">Luftverschmutzung</p>
-          <rating />
+          <rating rating="2" />
         </div>
         <div class="box">
           <p class="font-semibold mb-1">Shops</p>
-          <rating />
+          <rating rating="2" />
         </div>
         <div class="box">
           <p class="font-semibold mb-1">Aussicht</p>
-          <rating />
+          <rating rating="2.5" />
         </div>
         <div class="box">
           <p class="font-semibold mb-1">Empfang</p>
-          <rating />
+          <rating rating="2" />
         </div>
       </div>
     </div>
@@ -104,4 +103,3 @@ function toSrc(img) {
   return `data:image/png;base64,${img}`;
 }
 </script>
-⌂
